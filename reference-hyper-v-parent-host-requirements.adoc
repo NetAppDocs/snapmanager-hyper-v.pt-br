@@ -1,0 +1,54 @@
+---
+permalink: reference-hyper-v-parent-host-requirements.html 
+sidebar: sidebar 
+keywords: hyper-v, parent, host, physical, server, enable, contain, virtual, machine, snapmanager, requirement 
+summary: Os hosts pai do Hyper-V são servidores físicos nos quais a função Hyper-V está ativada. 
+---
+= Requisitos de host pai Hyper-V.
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Os hosts pai do Hyper-V são servidores físicos nos quais a função Hyper-V está ativada. Os servidores host que contêm máquinas virtuais são adicionados ao SnapManager para Hyper-V para proteção e recuperação. Para instalar e executar todos os componentes de software do SnapManager para Hyper-V, você deve garantir que os hosts pai do Hyper-V atendam aos requisitos mínimos do sistema operacional e do Hyper-V.
+
+* *Sistemas operacionais suportados*
++
+SnapManager for Hyper-V é executado nos seguintes sistemas operacionais:
+
++
+** Windows Server 2008 R2 SP1
+** Windows Server 2012 R2
+** Windows Server 2012
+** Windows Server 2016
+** Windows Server 2019
+
+
+* * Sistemas operacionais de console de gerenciamento suportados*
++
+Os consoles de gerenciamento devem estar executando os seguintes sistemas operacionais:
+
++
+** Windows Server 2008 R2 SP1
+** Windows Server 2012 R2
+** Windows Server 2012
+** Windows Server 2016
+** Windows Server 2019
+
+
+* *Requisitos do Hyper-V*
++
+Para obter mais informações, consulte as informações sobre Introdução do Hyper-V na biblioteca Microsoft TechNet.
+
+* *Suporte de internacionalização*
++
+O SnapManager para Hyper-V foi testado em sistemas operacionais de língua alemã e japonesa.
+
+
+
+*Informações relacionadas*
+
+http://technet.microsoft.com/library/cc753637(WS.10).aspx["Microsoft TechNet: Hyper-V"]
+
+http://mysupport.netapp.com/matrix["Ferramenta de Matriz de interoperabilidade do NetApp"]

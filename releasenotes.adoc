@@ -1,0 +1,13 @@
+---
+permalink: releasenotes.html 
+sidebar: sidebar 
+keywords: release, notes, new, features, fixed, issues, known, limitations, snapmanager, oracle 
+summary: Descreve novos recursos, notas de atualização, problemas corrigidos, limitações conhecidas e problemas conhecidos. 
+---
+= Notas de versão do SnapManager 2.1.4 para Hyper-V.
+:allow-uri-read: 
+
+
+A link:https://library.netapp.com/ecm/ecm_download_file/ECMLP2851116["Notas de versão do SnapManager 2.1.4 para Hyper-V."] descreve novos recursos, notas de atualização, problemas corrigidos, limitações conhecidas e problemas conhecidos.
+
+É necessário iniciar sessão no site de suporte da NetApp para aceder às Notas de versão.

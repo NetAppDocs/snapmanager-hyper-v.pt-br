@@ -1,0 +1,25 @@
+---
+permalink: reference-virtual-machine-backups-made-while-a-restore-operation-is-in-progress-might-be-invalid.html 
+sidebar: sidebar 
+keywords: virtual, machine, backup, restore, operation, progress, invalid 
+summary: Backups de máquinas virtuais feitos enquanto uma operação de restauração estiver em andamento podem ser inválidos. 
+---
+= Backups de máquinas virtuais feitos enquanto uma operação de restauração estiver em andamento podem ser inválidos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+* *Emissão*
++
+Um backup consistente com aplicativos criado enquanto uma operação de restauração está em andamento pode ser inválido. Restaurar uma máquina virtual a partir deste backup incompleto resulta em perda de dados e a máquina virtual é excluída.
+
+* *Causa*
++
+As informações de configuração do SnapManager para Hyper-V estão ausentes na cópia de backup. A operação de backup foi bem-sucedida, mas a cópia de backup é inválida porque as informações de configuração da máquina virtual não estão incluídas. As operações de restauração do SnapManager para Hyper-V excluem as informações de configuração da máquina virtual do host Hyper-V antes de executar uma operação de restauração. Esse comportamento é feito por design no Microsoft Hyper-V Writer.
+
+* *Ações corretivas*
++
+Certifique-se de que o agendamento de backup não coincide com a operação de restauração ou que o backup sob demanda que você deseja executar não se sobreponha a uma operação de restauração nos mesmos dados.
+
+

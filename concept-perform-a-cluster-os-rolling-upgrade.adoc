@@ -1,0 +1,22 @@
+---
+permalink: concept-perform-a-cluster-os-rolling-upgrade.html 
+sidebar: sidebar 
+keywords: cluster, operating, system, os, rolling, upgrade, snapmanager, perform, reducing, reduce, downtime 
+summary: 'Você pode executar uma atualização progressiva do sistema operacional de cluster (SO) para atualizar o sistema operacional dos nós de cluster sem interromper o SnapManager para Hyper-V. esse recurso suporta a conformidade com SLA, reduzindo o tempo de inatividade.' 
+---
+= Execute uma atualização progressiva do sistema operacional de cluster
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Você pode executar uma atualização progressiva do sistema operacional de cluster (SO) para atualizar o sistema operacional dos nós de cluster sem interromper o SnapManager para Hyper-V. esse recurso suporta a conformidade com SLA, reduzindo o tempo de inatividade.
+
+Os clusters de failover que executam o SnapManager para Hyper-V podem ser atualizados do Windows Server 2012 R2 para o Windows Server 2016 e Windows Server 2019 sem tempo de inatividade.
+
+Para obter informações sobre os benefícios de atualização progressiva do sistema operacional do cluster, o processo de instalação e as limitações, consulte as informações relacionadas.
+
+*Informações relacionadas*
+
+https://docs.microsoft.com/en-us/windows-server/failover-clustering/cluster-operating-system-rolling-upgrade["Microsoft TechNet: Atualização progressiva do sistema operacional de cluster"]

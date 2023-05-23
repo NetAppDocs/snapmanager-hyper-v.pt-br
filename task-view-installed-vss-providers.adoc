@@ -1,0 +1,38 @@
+---
+permalink: task-view-installed-vss-providers.html 
+sidebar: sidebar 
+keywords: view, vss, provider, install, host 
+summary: Você pode visualizar os provedores VSS instalados em seu host. 
+---
+= Veja os provedores VSS instalados
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Você pode visualizar os provedores VSS instalados em seu host.
+
+.Passos
+. Selecione menu:Iniciar[Executar] e digite o seguinte comando para abrir um prompt de comando do Windows:
++
+`cmd`
+
+. No prompt, digite o seguinte comando:
++
+`vssadmin list providers`
+
++
+A saída deve ser semelhante ao seguinte:
+
++
+[listing]
+----
+
+Provider name: ‘Data ONTAP VSS Hardware Provider’
+Provider type: Hardware
+Provider ID: {ddd3d232-a96f-4ac5-8f7b-250fd91fd102}
+Version: 7.0.0.xxxx
+----
+

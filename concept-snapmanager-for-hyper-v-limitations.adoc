@@ -1,0 +1,49 @@
+---
+permalink: concept-snapmanager-for-hyper-v-limitations.html 
+sidebar: sidebar 
+keywords: important, understand, snapmanager, hyper-v, limitation 
+summary: É importante que você entenda que alguns recursos não são suportados no SnapManager 2,1 e posteriores para Hyper-V. 
+---
+= Lista de limitações do SnapManager para Hyper-V.
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+É importante que você entenda que alguns recursos não são suportados no SnapManager 2,1 e posteriores para Hyper-V .
+
+* Cancelar, suspender e retomar trabalhos de cópia de segurança e restauro não são suportados.
+* As políticas não podem ser copiadas entre conjuntos de dados.
+* Os controles de acesso baseados em função (RBAC) não são compatíveis.
+* A exclusão de discos rígidos virtuais (VHDs) de um trabalho de backup do Serviço de cópia sombra de volume do SnapManager para Hyper-V (VSS) não é suportada.
+* A restauração de um único arquivo a partir de uma cópia de backup não é nativa.
+* O gerenciamento entre versões não é suportado; por exemplo, você não pode usar o console do cliente 1,2 para gerenciar o SnapManager 2,0 para Hyper-V e vice-versa.
+* Se você começar a restaurar uma máquina virtual Hyper-V (VM) e outro backup ou restauração da mesma VM estiver em andamento, sua tentativa falhará.
+* Restaurar uma VM excluída de uma cópia de backup consistente com falhas é suportado apenas para o Windows Server 2012.
+* A execução de versões diferentes do SnapManager para Hyper-V em nós diferentes de um cluster de failover não é suportada.
+* A reversão do SnapManager 2,1 para Hyper-V não é suportada.
+* Os trabalhos de backup ou restauração de máquinas virtuais não são suportados quando os usuários alteram o nó de propriedade do cluster durante o backup ou restauração.
+* Backups de modo misto (de máquinas virtuais que contêm arquivos em volumes CSV 2,0 e compartilhamentos SMB) não são suportados.
+* Depois de migrar o armazenamento de uma VM para outro local usando o Windows Server 2012, você não poderá restaurar essa VM a partir de cópias de backup feitas antes da migração.
+* Para o Windows Server 2012, não é possível executar um trabalho de cópia de segurança em que o conjunto de cópias de segurança inclui um volume partilhado de cluster (CSV) e um disco partilhado.
+* Ao configurar as definições de ligação de armazenamento, não pode utilizar o protocolo RPC (Remote Procedure Call); pode utilizar apenas protocolos HTTP e HTTPS.
+* A criação de um backup consistente com aplicativos de uma máquina virtual (VM) armazenada no armazenamento nas não é suportada pelo sistema operacional Windows Server 2012 Hyper-V.
++
+Esta limitação não se aplica a backups consistentes com falhas. Aplica-se apenas ao servidor Hyper-V gratuito, que não inclui serviços de cópia sombra de partilha de ficheiros.
+
+* O nome do switch virtual para uma VM deve ser exatamente o mesmo para os hosts do Windows primário e secundário.
+* As operações de backup e restauração exigem uma licença FlexClone quando as VMs Hyper-V são implantadas em SMB 3,0.
+* O tamanho máximo de LUN suportado para operações de restauro é de 14 TB.
+* Os seguintes servidores Hyper-V não suportam backups consistentes com aplicativos de VMs:
++
+** Microsoft Hyper-V Server 2016 (edição gratuita)
+** Microsoft Hyper-V Server 2019 (edição gratuita)
++
+Observe que essa limitação não se aplica a backups consistentes com falhas ou às seguintes plataformas Windows:
+
+** Microsoft Windows Server 2016 Standard e Datacenter Edition
+** Microsoft Windows Server 2019 Standard e Datacenter Edition
+
+
+

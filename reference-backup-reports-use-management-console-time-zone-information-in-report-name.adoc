@@ -1,0 +1,25 @@
+---
+permalink: reference-backup-reports-use-management-console-time-zone-information-in-report-name.html 
+sidebar: sidebar 
+keywords: backup, report, use, management, console, time, zone, information, report, name 
+summary: Os relatórios de backup usam as informações de fuso horário do console de gerenciamento no nome do relatório. 
+---
+= Os relatórios de backup usam as informações de fuso horário do console de gerenciamento no nome do relatório
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+* *Emissão*
++
+Quando você gera um relatório de backup usando um host cliente que reside em um fuso horário diferente do host pai, o nome do relatório usa as informações de fuso horário do host do cliente e o conteúdo do relatório usa o fuso horário do host pai.
+
+* *Causa*
++
+O carimbo de data/hora no nome do relatório de backup é exibido com as informações de fuso horário do host do cliente.
+
+* *Ações corretivas*
++
+Nenhuma ação corretiva é necessária.
+
+

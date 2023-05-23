@@ -1,0 +1,28 @@
+---
+permalink: task-delete-the-previously-exported-vm-from-the-non-data-ontap-host.html 
+sidebar: sidebar 
+keywords: import, virtual, machine, vm, successful, delete, non-ontap, host, deleting 
+summary: 'Depois de importar a máquina virtual (VM) com sucesso, você pode excluir a VM do host que não é ONTAP.' 
+---
+= Excluindo a VM exportada anteriormente do host não-ONTAP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Depois de importar a máquina virtual (VM) com sucesso, você pode excluir a VM do host que não é ONTAP.
+
+A VM deve ter sido importada com sucesso.
+
+. Selecione o host não-ONTAP no qual a VM foi hospedada originalmente.
+. No painel máquinas virtuais, clique com o botão direito do Mouse no nome da VM que você exportou anteriormente.
+. Clique em *Excluir*.
++
+Uma janela é aberta, solicitando que você confirme que deseja excluir a VM.
+
+. Clique em *Excluir*.
++
+A VM é removida de seu host original.
+
+

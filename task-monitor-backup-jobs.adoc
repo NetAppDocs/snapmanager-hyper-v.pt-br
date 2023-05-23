@@ -1,0 +1,28 @@
+---
+permalink: task-monitor-backup-jobs.html 
+sidebar: sidebar 
+keywords: view, schedule, job, particular, dataset, management, window, schedule, tab, backup, monitor, backup 
+summary: Pode visualizar os trabalhos de cópia de segurança programados para um conjunto de dados específico utilizando o separador janela Gestão de trabalhos agendada. Também pode ver os trabalhos de cópia de segurança e restauro que estão atualmente a ser executados utilizando o separador execução da janela de gestão de trabalhos. 
+---
+= Monitorizar trabalhos de cópia de segurança
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Pode visualizar os trabalhos de cópia de segurança programados para um conjunto de dados específico utilizando o separador Gestão de trabalhos. Você também pode exibir os trabalhos de backup e restauração que estão sendo executados no momento usando a guia Gerenciamento de tarefas windowRunning .
+
+.Passos
+. No painel de navegação, clique em *trabalhos*.
+. Clique na guia *agendado* ou na guia *Running*.
+. Selecione o trabalho de cópia de segurança agendado ou em execução ou o trabalho de restauro que pretende monitorizar.
++
+As informações sobre o trabalho são exibidas no painel Detalhes.
+
+. Use o relatório trabalho em execução na exibição *relatórios*, se desejar exibir um relatório em tempo real de um trabalho em execução.
++
+
+NOTE: Você também pode monitorar tarefas de backup com o console SCOM da Microsoft. Consulte o site da Microsoft para obter mais informações.
+
+

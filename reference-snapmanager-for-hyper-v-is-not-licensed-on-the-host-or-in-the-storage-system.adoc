@@ -1,0 +1,28 @@
+---
+permalink: reference-snapmanager-for-hyper-v-is-not-licensed-on-the-host-or-in-the-storage-system.html 
+sidebar: sidebar 
+keywords: snapmanager, hyper-v, license, host, storage, system 
+summary: O SnapManager para Hyper-V não está licenciado no host ou no sistema de armazenamento. 
+---
+= O SnapManager para Hyper-V não está licenciado no host ou no sistema de armazenamento
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+* *Mensagem*
++
+`SnapManager for Hyper-V is not licensed on the host or in the Storage System, backup is aborted`
+
+* *Descrição*
++
+Essa mensagem ocorre quando o sistema não está licenciado ou quando há problemas com enumeração, cache de máquina virtual ou uso de disco MBR (Master boot record).
+
+* *Ações corretivas*
++
+.. Certifique-se de que o seu sistema está licenciado.
+.. Migre quaisquer discos MBR, que o SnapManager para Hyper-V não suporta, para discos GUID Partition Table (GPT).
+.. Reinicie o SnapManager para Hyper-V. se isso não resolver o problema, você provavelmente terá um problema de enumeração e deve entrar em Contato com o suporte técnico.
+
+
+

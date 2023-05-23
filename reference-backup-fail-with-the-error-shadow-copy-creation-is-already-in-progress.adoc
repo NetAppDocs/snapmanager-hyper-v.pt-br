@@ -1,0 +1,30 @@
+---
+permalink: reference-backup-fail-with-the-error-shadow-copy-creation-is-already-in-progress.html 
+sidebar: sidebar 
+keywords: backup, failure, error, shadow, copy, creation 
+summary: A criação de cópia sombra já está em andamento erro de falha de backup 
+---
+= Falha de backup com o erro "a criação de cópia sombra já está em andamento"
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+* *Mensagem*
++
+[listing]
+----
+SnapManager for Hyper-V backup failed to complete
+Backup of the Dataset Name: example
+Backup id: c1bb4b28-c76c-4001-85fd-ffdfdb5737c9 failed to execute
+Error: Vss Requestor - Backup Components failed. Failed to add volume \\CIFS_USER_SER\USER_SHARE2\ to snapshot set. Another shadow copy creation is already in progress. Wait a few moments and try again.
+----
+* *Descrição*
++
+Este problema ocorre porque uma cópia de segurança anterior não é abortada e ainda está ativa. Use o seguinte comando para verificar se há entradas listadas: `cifs share show -shadowcopy`
+
+* *Ações corretivas*
++
+Abortar o trabalho de cópia de segurança anterior e tentar novamente a operação.
+
+

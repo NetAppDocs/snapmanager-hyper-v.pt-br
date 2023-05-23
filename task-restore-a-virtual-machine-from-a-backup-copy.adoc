@@ -1,0 +1,49 @@
+---
+permalink: task-restore-a-virtual-machine-from-a-backup-copy.html 
+sidebar: sidebar 
+keywords: snapmanager, hyper-v, restore, single, virtual, machine, vm, recover, lost, damage, data, backup, copy, restoring 
+summary: 'Você pode usar o SnapManager para Hyper-V, que restaura uma única máquina virtual (VM) de cada vez, para recuperar dados perdidos ou danificados de uma cópia de backup.' 
+---
+= Restaure uma máquina virtual a partir de uma cópia de backup
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Você pode usar o SnapManager para Hyper-V, que restaura uma única máquina virtual (VM) de cada vez, para recuperar dados perdidos ou danificados de uma cópia de backup.
+
+.O que você vai precisar
+Você deve ter as seguintes informações disponíveis:
+
+* Nome da cópia de segurança
+* Informações de configuração
+* Informações do script
+
+
+Ao restaurar para um host alternativo, o tipo de CPU no computador físico no qual sua VM original residiu deve ser compatível com o computador físico no qual você deseja restaurar a VM. Alternativamente, você pode usar o Gerenciador do Hyper-V para especificar que a máquina tem permissão para restaurar uma máquina com um tipo de CPU diferente.
+
+.Sobre esta tarefa
+Após a migração em tempo real de armazenamento, não é possível restaurar a partir do backup mais recente.
+
+Se você iniciar uma operação de restauração de uma máquina virtual Hyper-V e outro backup ou restauração da mesma máquina virtual estiver em processo, ele falhará.
+
+.Passos
+. No painel de navegação, clique em *recuperação*.
+. Selecione a máquina virtual que deseja restaurar.
+. No painel backups, selecione o nome da cópia de backup que deseja restaurar e clique em *Restaurar*.
++
+O assistente Restaurar é exibido.
+
+. Conclua as etapas no assistente para restaurar a cópia de backup da máquina virtual.
++
+Fechar o assistente não cancela a operação de restauração. O SnapManager para Hyper-V valida a configuração da máquina virtual antes de iniciar a operação de restauração. Se tiver havido alterações na configuração da máquina virtual, é apresentado um aviso, permitindo-lhe optar por continuar ou cancelar a operação.
+
+
+
+.Depois de terminar
+Você pode exibir o status da operação de restauração na janela *Gerenciamento de trabalhos* ou verificar os resultados da operação visualizando o relatório na janela *Gerenciamento de relatórios*.
+
+*Informações relacionadas*
+
+xref:reference-restore-from-a-backup-after-failback.adoc[Restaurar a partir de uma cópia de segurança após o failback]

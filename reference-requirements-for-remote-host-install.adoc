@@ -1,0 +1,56 @@
+---
+permalink: reference-requirements-for-remote-host-install.html 
+sidebar: sidebar 
+keywords: remote, host, install, wizard, snapmanager, hyper-v, host, node, require, detail, requirement 
+summary: Antes de usar o assistente de instalação remota de host para instalar remotamente o SnapManager para Hyper-V em um host ou nó, você deve reunir alguns detalhes necessários do host. 
+---
+= Requisitos para usar o assistente de instalação do host remoto
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Antes de usar o assistente de instalação remota de host para instalar remotamente o SnapManager para Hyper-V em um host ou nó, você deve reunir alguns detalhes necessários do host.
+
+Você pode acessar o assistente de instalação remota do host a partir do painel ações na janela proteção. Ele permite que você instale ou desinstale remotamente o SnapManager para Hyper-V em nós ou hosts autônomos e de cluster.
+
+Se você adicionar um host que não tenha o SnapManager para Hyper-V, o assistente Adicionar host solicitará que você o instale no host.
+
+* *Instalar ou desinstalar*
++
+Você deve escolher se deseja usar o assistente para instalar ou desinstalar remotamente o SnapManager para Hyper-V em hosts ou nós.
+
+* *Por servidor ou por armazenamento*
++
+Você deve escolher se deseja instalar o SnapManager para Hyper-V por servidor ou por storage.
+
+* *Nome do host/IP*
++
+Você deve fornecer o nome ou endereço IP do host no qual deseja instalar o SnapManager para Hyper-V. você pode selecionar *Procurar...* para procurar o host ou nó.
+
+* *Porto*
++
+Você deve fornecer o número da porta para se conetar ao host ou nó.
+
+* *Chave de licença SMHV*
++
+Você deve fornecer a chave de licença SnapManager for Hyper-V.
+
+* *Chave de licença SDW*
++
+Você deve fornecer a chave de licença do SnapDrive para Windows.
+
+* *Nome de usuário*
++
+Você deve fornecer o nome de usuário de nível de administrador do host ou nó usando o formato _domínio_nome de usuário_.
+
+* *Senha*
++
+Você deve inserir a senha do host ou do nó.
+
+* *Confirme a senha*
++
+Você deve inserir novamente a senha do host ou do nó para confirmação.
+
+

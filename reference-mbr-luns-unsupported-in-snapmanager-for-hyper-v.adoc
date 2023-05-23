@@ -1,0 +1,25 @@
+---
+permalink: reference-mbr-luns-unsupported-in-snapmanager-for-hyper-v.html 
+sidebar: sidebar 
+keywords: mbr, lun, unsupported, snapmanager, hyper-v 
+summary: LUNs MBR não suportados no SnapManager para Hyper-V. 
+---
+= LUNs MBR não suportados no SnapManager para Hyper-V.
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+* *Emissão*
++
+O SnapManager para Hyper-V não oferece suporte a LUNs MBR para máquinas virtuais executadas em volumes compartilhados ou volumes compartilhados de cluster.
+
+* *Causa*
++
+Um problema de API da Microsoft retorna GUIDs de volume diferentes quando a propriedade do disco de volume compartilhado do cluster muda. O GUID de volume não é o mesmo que o GUID na propriedade de recurso de disco do cluster. Esse problema também se aplica a máquinas virtuais disponibilizadas altamente usando o agrupamento de failover da Microsoft.
+
+* *Ações corretivas*
++
+Consulte a base de dados de Conhecimento da Microsoft.
+
+

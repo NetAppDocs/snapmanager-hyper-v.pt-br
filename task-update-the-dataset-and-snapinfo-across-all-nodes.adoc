@@ -1,0 +1,27 @@
+---
+permalink: task-update-the-dataset-and-snapinfo-across-all-nodes.html 
+sidebar: sidebar 
+keywords: perform, cluster, os, rolling, upgrade, dataset, snapinfo, node, updating, update 
+summary: Depois de executar uma atualização progressiva do sistema operacional do cluster, você deve atualizar o conjunto de dados e o SnapInfo em todos os nós. 
+---
+= Atualize o conjunto de dados e o SnapInfo em todos os nós
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Depois de executar uma atualização progressiva do sistema operacional do cluster, você deve atualizar o conjunto de dados e o SnapInfo em todos os nós.
+
+.O que você vai precisar
+Mais uma vez
+
+
+NOTE: A atualização progressiva do cluster é suportada do Windows Server 2016 para o Windows Server 2019; o backup de disco compartilhado não é suportado em sistemas operacionais de modo misto.
+
+.Passos
+. Edite todos os conjuntos de dados no nó do Windows 2012 R2.
+. Verifique se todos os conjuntos de dados disponíveis estão visíveis no nó do Windows 2016.
+. Defina o caminho SnapInfo no nó do Windows 2012 R2.
+. Verifique se o caminho SnapInfo correto é exibido no nó do Windows 2016.
+

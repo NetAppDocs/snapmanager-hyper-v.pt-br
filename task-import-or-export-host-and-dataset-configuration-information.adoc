@@ -1,0 +1,34 @@
+---
+permalink: task-import-or-export-host-and-dataset-configuration-information.html 
+sidebar: sidebar 
+keywords: manage, host, management, console, multiple, import, export, information, dataset, consistency 
+summary: Embora você deva gerenciar um host a partir de apenas um console de gerenciamento, se precisar fazer isso a partir de vários consoles, você pode importar e exportar informações de configuração de host e conjunto de dados de um console de gerenciamento remoto para outro para garantir a consistência dos dados. 
+---
+= Importar ou exportar informações de configuração do host e do conjunto de dados
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Embora você deva gerenciar um host a partir de apenas um console de gerenciamento, se precisar fazer isso a partir de vários consoles, você pode importar e exportar informações de configuração de host e conjunto de dados de um console de gerenciamento remoto para outro para garantir a consistência dos dados.
+
+.Sobre esta tarefa
+Você não deve importar ou exportar informações de configuração para o diretório no qual o SnapManager para Hyper-V está instalado. Se você desinstalar o SnapManager para Hyper-V, esse arquivo será perdido.
+
+
+NOTE: Você pode usar o assistente Importar e Exportar para alterar as configurações do host e do conjunto de dados para uma configuração exportada anteriormente. Se você executar essa operação em um ambiente em cluster, será necessário importar as configurações em todos os nós do cluster para que todas as configurações do host e do conjunto de dados sejam as mesmas.
+
+.Passos
+. No painel de navegação, clique em *proteção*.
+. No painel *ações*, clique em *Importar e exportar*.
++
+O assistente Importar e Exportar é exibido.
+
+. Conclua as etapas no assistente para exportar informações de configuração do host e do conjunto de dados de um console de gerenciamento para outro.
++
+
+NOTE: O arquivo de exportação é estático e atual apenas no momento em que o arquivo de exportação foi executado.
+
+. Conclua as etapas no assistente para importar informações de configuração do host e do conjunto de dados para o console de gerenciamento de destino.
+

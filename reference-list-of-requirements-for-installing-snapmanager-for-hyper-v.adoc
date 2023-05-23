@@ -1,0 +1,56 @@
+---
+permalink: reference-list-of-requirements-for-installing-snapmanager-for-hyper-v.html 
+sidebar: sidebar 
+keywords: environment, hardware, software, ontap, license, licensing, requirement, install, snapmanager, hyper-v, windows, .net, 4.5 
+summary: Seu ambiente deve atender a todos os requisitos de hardware, software, ONTAP e licenciamento antes de instalar o SnapManager para Hyper-V. 
+---
+= Lista de requisitos para a instalação do SnapManager para Hyper-V.
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Seu ambiente deve atender a todos os requisitos de hardware, software, ONTAP e licenciamento antes de instalar o SnapManager para Hyper-V. o instalador pára se os requisitos para o sistema operacional Windows mínimo e .Net 4,5 não forem atendidos.
+
+
+
+== Requisitos de host pai Hyper-V.
+
+Você deve ter os hosts pai do Hyper-V executando o Windows Server 2008 R2 ou superior. Você deve ter as funções do Hyper-V ativadas nos hosts pai. Você deve ter o SnapDrive 7,1 para Windows ou posterior instalado no host pai do Hyper-V.
+
+
+
+== Transferência do SnapManager para Hyper-V.
+
+Você deve ter baixado o software SnapManager para Hyper-V do site de suporte da NetApp.
+
+
+
+== Requisitos do sistema de storage
+
+O sistema de storage deve executar a versão apropriada do software ONTAP. Você pode usar o licenciamento baseado em host ou do sistema de armazenamento para instalar o SnapManager para Hyper-V.
+
+
+
+== Licenças
+
+Você deve ter as licenças apropriadas para executar o SnapManager para Hyper-V.
+
+
+
+== Credenciais
+
+Você deve ter as credenciais apropriadas para instalar e executar o SnapManager para Hyper-V.
+
+
+
+== Requisitos de conta de serviço e autenticação
+
+Você precisa ter uma conta de serviço e atender aos requisitos de autenticação. Você deve ser capaz de fazer login no host usando a conta de serviço e essa conta deve ter direitos administrativos.
+
+
+
+== Número da porta do serviço Web
+
+Você deve ter o número da porta Net.TCP do serviço Web disponível. O número da porta padrão é 808. Ao instalar o SnapManager para Hyper-V em um cluster, você deve garantir que o mesmo número de porta seja usado em todos os nós.

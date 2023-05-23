@@ -1,0 +1,52 @@
+---
+permalink: reference-requirements-for-creating-a-dataset.html 
+sidebar: sidebar 
+keywords: specific, requirement, create, dataset, protect, data, host, cluster, snapmanager, hyper-v 
+summary: Você precisa atender a requisitos específicos quando quiser criar conjuntos de dados para proteger seus dados. 
+---
+= Requisitos para criar um conjunto de dados
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Você precisa atender a requisitos específicos quando quiser criar conjuntos de dados para proteger seus dados. Primeiro, é necessário adicionar o cluster de host ou host ao SnapManager para Hyper-V e, em seguida, adicionar máquinas virtuais ao cluster de host ou host.
+
+
+
+== Nome e descrição do conjunto de dados
+
+Ao nomear o conjunto de dados, você deve usar uma convenção de nomenclatura em seu site para ajudar os administradores a localizar e identificar conjuntos de dados, limitados a esses carateres:
+
+* de a a z
+* De a a Z
+* 0 a 9
+* _ (sublinhado)
+* - (hífen)
+
+
+
+
+== Recursos do conjunto de dados
+
+É necessário adicionar o cluster de host ou host ao SnapManager para Hyper-V antes de adicionar recursos, como máquinas virtuais, ao conjunto de dados.
+
+É possível adicionar hosts, máquinas virtuais dedicadas ou máquinas virtuais compartilhadas a um conjunto de dados. Se você adicionar um host, adicione todas as máquinas virtuais que pertencem ao host. Você também pode adicionar máquinas virtuais pertencentes a diferentes hosts ao conjunto de dados. As máquinas virtuais podem pertencer a vários conjuntos de dados.
+
+
+NOTE: As máquinas virtuais dedicadas e compartilhadas que pertencem ao mesmo cluster de host não devem existir no mesmo conjunto de dados. Adicionar esses tipos de recursos a um único conjunto de dados pode causar falha no backup do conjunto de dados.
+
+
+
+== Máquinas virtuais e LUNs ONTAP
+
+Todos os arquivos associados às máquinas virtuais, incluindo arquivos de configuração, cópias Snapshot e VHDs, devem residir nos LUNs ONTAP.
+
+
+
+== Consumo de recursos do conjunto de dados
+
+Apenas uma operação de backup consistente com aplicativos pode ocorrer em um host a qualquer momento. Se as mesmas máquinas virtuais pertencerem a conjuntos de dados diferentes, você não deve agendar um backup consistente com aplicações dos conjuntos de dados ao mesmo tempo. Se isso ocorrer, uma das operações de backup falhará.
+
+Ao criar um conjunto de dados, você deve selecionar todas as máquinas virtuais que residem em um LUN ONTAP específico. Assim, você obtém todos os backups em uma cópia Snapshot e reduz o consumo de espaço no sistema de storage.

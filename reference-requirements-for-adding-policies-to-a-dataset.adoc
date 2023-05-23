@@ -1,0 +1,113 @@
+---
+permalink: reference-requirements-for-adding-policies-to-a-dataset.html 
+sidebar: sidebar 
+keywords: specific, requirement, apply, policies, policy, backup, restore, function, multiple, retention, replication, dataset 
+summary: Você precisa atender a requisitos específicos quando quiser aplicar políticas a conjuntos de dados para funcionalidade de backup ou restauração. É possível adicionar várias políticas de retenção, agendamento e replicação ao mesmo conjunto de dados. 
+---
+= Requisitos para adicionar políticas a um conjunto de dados
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Você precisa atender a requisitos específicos quando quiser aplicar políticas a conjuntos de dados para funcionalidade de backup ou restauração. É possível adicionar várias políticas de retenção, agendamento e replicação ao mesmo conjunto de dados.
+
+
+
+== Nome e descrição da política
+
+Um nome e uma descrição da política, limitados a estes carateres:
+
+* de a a z
+* De a a Z
+* 0 a 9
+* _ (sublinhado)
+* - (hífen)
+
+
+
+
+== Limites de retenção do backup
+
+Você deve decidir o período mínimo de tempo que deseja manter as cópias de backup por hora, diária, semanal ou mensal antes que elas sejam excluídas.
+
+
+NOTE: Backups com um tipo de retenção de "ilimitado" não são excluídos.
+
+Você pode manter backups com base no tempo ou em um número especificado. Por exemplo, você pode manter os 10 backups mais atuais ou excluir backups com mais de 15 dias.
+
+Se o sistema parecer manter backups antigos, você deve verificar suas políticas de retenção. Todos os objetos em backup que compartilham uma cópia Snapshot precisam atender aos critérios de exclusão de backup para que a política de retenção possa acionar a remoção de uma cópia Snapshot.
+
+
+
+== Nome do trabalho de cópia de segurança programado
+
+Tem de atribuir um nome ao trabalho de cópia de segurança agendado.
+
+
+
+== Permissão para agendar backups
+
+Você precisa ter credenciais apropriadas para agendar backups de conjuntos de dados.
+
+
+
+== Número de conjuntos de dados possíveis programados para backup simultaneamente
+
+Se as mesmas máquinas virtuais pertencerem a conjuntos de dados diferentes, você não deve agendar um backup de mais de um conjunto de dados que contenha a mesma VM ao mesmo tempo. Quando isso ocorre, uma das operações de backup falha. Apenas uma operação de backup pode ocorrer em um host a qualquer momento.
+
+
+
+== Tipo de backup programado
+
+Você pode executar um backup consistente com aplicativos ou com falhas.
+
+
+
+== Opções de backup
+
+Você deve escolher se deseja atualizar a localização de destino do SnapMirror após a conclusão da cópia de segurança.
+
+A atualização só será bem-sucedida se você já tiver o SnapMirror configurado e se os LUNs que contêm as máquinas virtuais no conjunto de dados pertencerem ao volume SnapMirror de origem.
+
+O comportamento padrão do SnapManager para Hyper-V é falhar um backup se uma ou mais máquinas virtuais não puderem ser feitas backup on-line. Se uma máquina virtual estiver no estado guardado ou desligado, não poderá efetuar uma cópia de segurança online. Em alguns casos, as máquinas virtuais estão no estado salvo ou são desativadas para manutenção, mas os backups ainda precisam continuar, mesmo que um backup on-line não seja possível. Para fazer isso, você pode mover as máquinas virtuais que estão no estado salvo ou desligar para um conjunto de dados diferente com uma política que permite backups de estado salvos.
+
+Você também pode selecionar a caixa de seleção permitir backup de VM de estado salvo para permitir que o SnapManager para Hyper-V faça backup da máquina virtual no estado salvo. Se você selecionar essa opção, o SnapManager para Hyper-V não falhará o backup quando o gravador VSS do Hyper-V fizer backup da máquina virtual no estado salvo ou executar um backup off-line da máquina virtual. Executar um backup de estado salvo ou off-line pode causar inatividade.
+
+O `distributed application-consistent backup` recurso permite que várias VMs em execução nos nós de cluster do parceiro sejam consistentes em uma única cópia Snapshot de hardware feita a partir do nó de backup. Esse recurso é compatível com todas as VMs em execução em um volume do Windows CSV 2,0 em vários nós em um cluster de failover do Windows. Para usar esse recurso, selecione o `Application-consistent` tipo de backup e marque a caixa de seleção *Ativar Backup distribuído* .
+
+
+
+== Storage secundário em um backup do SnapMirror
+
+Essas opções permitem aceitar opções aplicáveis a um storage secundário definido em uma relação do SnapMirror. Aqui, você pode selecionar *Atualizar SnapMirror após o backup*. No painel de opções do rótulo do cofre, você pode selecionar *Atualizar SnapVault após o backup*. Se selecionar *Atualizar SnapVault após a cópia de segurança*, terá de escolher uma etiqueta do cofre no menu pendente ou introduzir uma etiqueta personalizada.
+
+
+
+== Scripts de backup
+
+Você deve decidir se deseja que os scripts de backup opcionais sejam executados antes ou depois do backup.
+
+Esses scripts são executados em todos os hosts membros do conjunto de dados, a menos que você indique um servidor específico.
+
+Scripts de backup são executados em cada nó no conjunto de dados. Você pode definir a política de conjunto de dados para especificar o nome do host no qual deseja executar os scripts. A política é processada em cada nó no cluster em que a VM a fazer backup está em execução.
+
+image::smhv_policywizard_specified_host.gif[host especificado pelo smhv policywizard]
+
+Você pode usar as seguintes variáveis de ambiente em argumentos para pós-scripts de backup:
+
+* * VMSnapshot*: Especifica o nome da cópia Snapshot criada no sistema de armazenamento como resultado desse backup. Quando você executa backups consistentes com aplicações em ambientes ONTAP executados no modo 7, esse é o nome da segunda cópia Snapshot (backup). O primeiro nome é o mesmo que o segundo nome, mas sem o sufixo _backup.
+* * SnapInfoName*: Especifica o carimbo de data/hora usado no nome do diretório SnapInfo.
+* Especifica o nome da cópia Snapshot do SnapInfo criada no sistema de armazenamento. O SnapManager para Hyper-V faz uma cópia Snapshot do LUN SnapInfo no final da operação de backup do conjunto de dados.
++
+
+NOTE: A variável SnapInfoSnapshot* é suportada apenas para máquinas virtuais dedicadas.
+
+
+
+*Informações relacionadas*
+
+http://technet.microsoft.com/library/cc753637(WS.10).aspx["Microsoft TechNet: Hyper-V"]
+
+http://docs.netapp.com/ontap-9/topic/com.netapp.doc.exp-buvault/home.html["Backup em volume do ONTAP 9 usando o Guia expresso do SnapVault"]

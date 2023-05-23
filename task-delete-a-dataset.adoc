@@ -1,0 +1,30 @@
+---
+permalink: task-delete-a-dataset.html 
+sidebar: sidebar 
+keywords: delete, dataset, protection, change, deleting 
+summary: Você pode excluir um conjunto de dados conforme suas necessidades de proteção mudam. 
+---
+= Eliminar um conjunto de dados
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Você pode excluir um conjunto de dados conforme suas necessidades de proteção mudam.
+
+.Sobre esta tarefa
+A exclusão de um conjunto de dados não exclui as máquinas virtuais que pertencem ao conjunto de dados. Depois que o conjunto de dados é excluído, as máquinas virtuais que pertenciam a ele ficam desprotegidas se não pertencerem a outro conjunto de dados.
+
+.Passos
+. No painel de navegação, clique no menu:proteção[Datasets].
+. Selecione o conjunto de dados que pretende eliminar.
+. No painel Actions (ações), clique em *Delete* (Excluir) e clique em *OK* para excluir o conjunto de dados.
++
+A exclusão do conjunto de dados também exclui os trabalhos agendados de todos os hosts que são membros do conjunto de dados. O SnapManager para Hyper-V não gerencia mais a retenção de backups quando você exclui o conjunto de dados, mesmo que ele seja recriado com o mesmo nome.
+
+
+
+.Resultados
+O SnapManager para Hyper-V não protege mais os recursos associados ao conjunto de dados excluído, a menos que esses recursos pertençam a outro conjunto de dados.

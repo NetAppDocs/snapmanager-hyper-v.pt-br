@@ -1,0 +1,25 @@
+---
+permalink: reference-secondary-machine-unable-to-delete-backups-after-failover.html 
+sidebar: sidebar 
+keywords: deleting, delete, backup, failover 
+summary: Exclusão de backups após o failover. 
+---
+= Excluir backups após o failover
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+* *Mensagem*
++
+`The specified backup does not exist for some of the objects in the dataset.`
+
+* *Descrição*
++
+Após o failover para um local secundário (local B), talvez você não consiga excluir backups criados no local principal (local A). Se você estiver em um local de recuperação de desastres (local B) e tentar excluir backups feitos no local principal (local A), você excluirá backups do local principal (local A) e não do local de recuperação de desastres (local B).
+
+* *Ações corretivas*
++
+Depois de executar operações de recuperação de desastres, exclua somente os backups feitos no local de operação atual.
+
+

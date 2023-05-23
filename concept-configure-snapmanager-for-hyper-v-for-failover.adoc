@@ -1,0 +1,43 @@
+---
+permalink: concept-configure-snapmanager-for-hyper-v-for-failover.html 
+sidebar: sidebar 
+keywords: enable, snapmanager, hyper-v, implementation, disaster, recovery, primary, secondary, host, powershell, failover, configure, configuring 
+summary: Para habilitar totalmente sua implementação do SnapManager para Hyper-V para recuperação de desastres, você deve garantir que os hosts primário e secundário tenham a mesma configuração e saber que você pode executar a recuperação de desastres usando apenas o PowerShell. 
+---
+= Configurar o SnapManager para Hyper-V para failover
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Para habilitar totalmente sua implementação do SnapManager para Hyper-V para recuperação de desastres, você deve garantir que os hosts primário e secundário tenham a mesma configuração e saber que você pode executar a recuperação de desastres usando apenas o PowerShell.
+
+Os seguintes tipos de configurações suportam recuperação de desastres:
+
+* Host primário autônomo e host Hyper-V secundário autônomo
+* Hosts Hyper-V primários e secundários em cluster
+* Volumes compartilhados de cluster (CSV) nos hosts Hyper-V primário e secundário
+
+
+Por exemplo, uma máquina virtual de cluster (VM) em um host primário deve ser recuperada como uma VM de cluster, uma VM dedicada (independente) deve ser recuperada como uma VM dedicada e uma VM CSV deve ser recuperada como uma VM CSV.
+
+Os LUNs em um host secundário devem ser conectados da mesma maneira que os outros no host principal. Ou seja, o tipo de LUN (dedicado, compartilhado ou CSV) e a letra da unidade, ponto de montagem ou ponto de reparação CSV devem ser os mesmos em hosts primários e secundários. Com as operações de restauração SAN para um local de caminho alternativo, uma letra de unidade diferente pode ser especificada para a operação de restauração LUN em um local secundário.
+
+
+NOTE: Letras de unidade ou CSVs e pontos de montagem de volume são suportados.
+
+O exemplo a seguir mostra uma configuração básica de recuperação de desastres:
+
+* O local A (principal) contém sistemas de armazenamento e um sistema de host Hyper-V autônomo ou cluster de host Hyper-V.
++
+As VMs em execução nesses hosts residem no storage da Data ONTAP.
+
+* O local B (secundário) contém sistemas de storage e um host ou cluster Hyper-V (o mesmo que o primário).
+* O SnapDrive para Windows e o SnapManager para Hyper-V são instalados nos sites A e B..
+* A relação SnapMirror é inicializada do local A para o local B.
+* No local A, um host ou cluster Hyper-V adicionado ao SnapManager para Hyper-V e as VMs são feitas backup usando o SnapManager para Hyper-V.
++
+A política para atualizar o SnapMirror após a verificação da cópia de segurança. Após cada backup, o local secundário é atualizado com novas cópias Snapshot das VMs e cópias do SnapInfo.
+
+

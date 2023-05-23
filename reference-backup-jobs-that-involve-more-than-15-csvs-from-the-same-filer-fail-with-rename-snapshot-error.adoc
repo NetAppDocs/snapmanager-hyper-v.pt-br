@@ -1,0 +1,33 @@
+---
+permalink: reference-backup-jobs-that-involve-more-than-15-csvs-from-the-same-filer-fail-with-rename-snapshot-error.html 
+sidebar: sidebar 
+keywords: backup, job, 15, csv, storage, system, fail 
+summary: As tarefas de backup que envolvem mais de 15 CSVs do mesmo sistema de armazenamento podem falhar. 
+---
+= As tarefas de backup que envolvem mais de 15 CSVs do mesmo sistema de armazenamento podem falhar
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+* *Emissão*
++
+Os trabalhos de backup do SnapManager para Hyper-V que envolvem mais de 15 volumes compartilhados de cluster (CSVs) do mesmo sistema de armazenamento falham com o seguinte erro:
+
++
+[listing]
+----
+Failed to rename the Snapshot copy of the LUN to the new Snapshot copy name.
+Error code: The attempt to get the named attribute for the LUN on the storage system failed.
+Error code: 13057.
+Error description: An error occurred in the reception and processing of the API reply from the appliance.
+----
+* *Causa*
++
+Esta é uma limitação causada pelo Data ONTAP para impedir uma retenção de recursos do sistema. A limitação de 15 LUNs é aplicável apenas quando todos os LUNs pertencem ao mesmo sistema de armazenamento. Se um conjunto de dados de backup for criado para que não mais de 15 CSVs sejam envolvidos em um sistema de armazenamento, esse problema não ocorre.
+
+* *Ações corretivas*
++
+Se você quiser fazer um backup que inclua mais de 15 LUNs do mesmo sistema de storage, crie vários conjuntos de dados para evitar essa falha.
+
+

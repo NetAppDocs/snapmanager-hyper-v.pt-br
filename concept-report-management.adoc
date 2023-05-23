@@ -1,0 +1,37 @@
+---
+permalink: concept-report-management.html 
+sidebar: sidebar 
+keywords: view, delete, backup, restore, configuration, report, snapmanager, hyper-v, information, virtual, machine, vm, managing, manage 
+summary: Você pode exibir e excluir relatórios de backup, restauração e configuração no SnapManager para Hyper-V. esses relatórios contêm informações importantes sobre seus conjuntos de dados, máquinas virtuais e hosts. Você também pode exportar relatórios em vários formatos diferentes. 
+---
+= Gerenciar relatórios
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Você pode exibir e excluir relatórios de backup, restauração e configuração no SnapManager para Hyper-V. esses relatórios contêm informações importantes sobre seus conjuntos de dados, máquinas virtuais e hosts. Você também pode exportar relatórios em vários formatos diferentes.
+
+* *Relatórios de backup*
++
+Os relatórios de backup exibem todas as informações de backup para todos os hosts pertencentes a um conjunto de dados específico. É possível exibir um relatório de backup para um conjunto de dados ou uma máquina virtual. Os relatórios exibidos para uma máquina virtual usam o nome da máquina virtual em vez de seu GUID.
+
++
+Quando o relatório de backup é exibido, você pode exportá-lo para vários formatos diferentes.
+
+* *Restaurar relatórios*
++
+Os relatórios de restauração exibem todas as informações sobre a operação de restauração por VM.
+
++
+Quando o relatório de restauração é exibido, você pode exportá-lo para vários formatos diferentes.
+
+* *Relatórios de configuração*
++
+Os relatórios de configuração exibem as configurações de notificação, caminho do relatório e caminho SnapInfo para o host selecionado.
+
++
+Quando o relatório de configuração é exibido, você pode exportá-lo para vários formatos diferentes.
+
+

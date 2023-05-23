@@ -1,0 +1,43 @@
+---
+permalink: task-view-a-report.html 
+sidebar: sidebar 
+keywords: view, report, dataset, virtual, machine, resource, manage, snapmanager, hyper-v 
+summary: Você pode exibir um relatório sobre um conjunto de dados ou um recurso de máquina virtual gerenciado no SnapManager para Hyper-V. 
+---
+= Exibir um relatório de conjunto de dados
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Você pode exibir um relatório sobre um conjunto de dados ou um recurso de máquina virtual gerenciado no SnapManager para Hyper-V.
+
+.Passos
+. No painel de navegação, clique no menu:relatórios[Datasets].
+. Selecione o conjunto de dados ou a máquina virtual que contém o relatório que pretende visualizar.
+. No painel relatórios, clique na guia Backup ou na guia recuperação.
+. Selecione o relatório que deseja exibir e clique em *Exibir relatório*.
++
+|===
+| Se você quiser ver um... | Então... 
+
+
+ a| 
+*relatório do conjunto de dados*
+ a| 
+Você pode exibir um relatório de backup.
+
+
+
+ a| 
+*relatório de máquina virtual*
+ a| 
+Você pode exibir um relatório de backup ou recuperação.
+
+|===
++
+O relatório é exibido em uma janela separada.
+
+

@@ -1,0 +1,14 @@
+---
+permalink: concept-configure-datasets.html 
+sidebar: sidebar 
+keywords: create, modify, view, delete, dataset, protection, configure, configuring 
+summary: Você pode criar, modificar, visualizar e excluir conjuntos de dados de acordo com suas necessidades de proteção. 
+---
+= Configurar conjuntos de dados
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Você pode criar, modificar, visualizar e excluir conjuntos de dados de acordo com suas necessidades de proteção.

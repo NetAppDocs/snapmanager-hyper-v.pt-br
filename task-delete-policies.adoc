@@ -1,0 +1,25 @@
+---
+permalink: task-delete-policies.html 
+sidebar: sidebar 
+keywords: delete, policy, policies, deleting, dataset 
+summary: Você pode excluir uma política de um conjunto de dados quando ela não for mais necessária. 
+---
+= Eliminar políticas
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Você pode excluir uma política de um conjunto de dados quando ela não for mais necessária.
+
+.Passos
+. No painel de navegação, clique no menu:proteção[Datasets].
+. Selecione o conjunto de dados que contém a política que pretende eliminar.
+. No painel políticas, selecione a política específica que deseja excluir.
+. No painel ações, clique em *Remover* e clique em *OK* para excluir a política.
++
+A exclusão da diretiva também exclui os trabalhos agendados de todos os hosts que são membros do conjunto de dados.
+
+

@@ -1,0 +1,54 @@
+---
+permalink: concept-create-and-manage-backup-jobs-in-snapmanager-for-hyper-v.html 
+sidebar: sidebar 
+keywords: create, monitor, on-demand, backup, manage, schedule, snapmanager, hyper-v, creating, managing, application, crash 
+summary: Você pode criar e monitorar backups sob demanda ou backups programados gerenciados no SnapManager para Hyper-V. 
+---
+= Criar e gerenciar trabalhos de backup no SnapManager para Hyper-V.
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Você pode criar e monitorar backups sob demanda ou backups programados gerenciados no SnapManager para Hyper-V. você também pode executar dois tipos de tarefas de backup com o SnapManager para Hyper-V: Consistente com aplicativos e consistente com falhas.
+
+
+
+== Sobre o SnapManager para backups do Hyper-V.
+
+Você pode criar tarefas de backup sob demanda e executá-las quando quiser ou criar tarefas de backup agendadas usando políticas anexadas a conjuntos de dados. Um trabalho de backup sob demanda pode incluir políticas de retenção e replicação, bem como scripts para execução antes e depois do backup. Você pode criar, modificar, exibir e excluir as políticas que compõem os trabalhos de backup programados.
+
+
+
+== Tipos de tarefas de backup que o SnapManager para Hyper-V pode executar
+
+Você pode executar dois tipos de tarefas de backup com o SnapManager para Hyper-V: Consistente com aplicativos e consistente com falhas.
+
+
+
+== Trabalhos de backup consistentes com aplicativos
+
+Os trabalhos de backup consistentes com aplicativos são completos, confiáveis e intensivos em recursos. Eles são executados em coordenação com o Microsoft volume Shadow Copy Service (VSS) para garantir que cada aplicativo executado na VM seja encerrado antes de criar uma cópia Snapshot. Este método de backup garante a consistência dos dados da aplicação. Você pode usá-lo para restaurar as VMs e as aplicações em execução nelas. No entanto, os trabalhos de backup consistentes com aplicativos consomem muito tempo e podem ser complexos.
+
+
+
+== Trabalhos de backup consistentes com falhas
+
+As tarefas de backup consistentes com falhas são cópias Snapshot rápidas de todas as LUNs usadas pelas VMs envolvidas em um conjunto de dados. As cópias de backup resultantes são semelhantes às capturas de dados de VMs que travam ou são abruptamente desligadas. As tarefas de backup consistentes com falhas fornecem uma maneira rápida de capturar dados, mas as VMs devem estar presentes para serem restauradas a partir de um backup consistente com falhas. Os trabalhos de cópia de segurança consistentes com falhas não se destinam a substituir trabalhos de cópia de segurança consistentes com aplicações.
+
+
+
+== Requisitos e limitações de backup do SnapManager para Hyper-V.
+
+Você deve estar ciente dos requisitos e limitações de um backup do SnapManager para Hyper-V:
+
+* As operações de backup e restauração não são suportadas se você estiver executando uma operação de switchover ou switchback em uma configuração do MetroCluster. Se uma operação de backup e restauração e uma operação de comutação ou switchback estiverem sendo executadas simultaneamente, o `.vhd` formato de arquivo de uma VM pode mudar para `.avhdx` nos sistemas Windows Server 2012 R2. A VM não é afetada por essa alteração.
+* A `distributed application-consistent backup` opção permite que várias VMs em execução nos nós de cluster do parceiro sejam consistentes em uma única cópia Snapshot de hardware criada a partir do nó de backup. Esta opção é compatível com todas as VMs em execução em um volume do Windows CSV 2,0 em vários nós em um cluster de failover do Windows.
+* Ao operar no modo 7, as tarefas de backup consistentes com aplicativos usam o Fornecedor de hardware VSS para fazer duas cópias Snapshot. As cópias Snapshot são chamadas `snapshot_name` e `snapshot_name_backup`. As duas cópias Snapshot são feitas para facilitar a recuperação automática durante o backup VSS.
+* Em ambientes em cluster, os backups consistentes com aplicações exigem apenas uma cópia Snapshot para o processo de recuperação automática. Os clones SIS são utilizados para executar a recuperação automática e, após a conclusão da recuperação automática, a primeira cópia Snapshot (`snapshot_name`) é excluída.
+* Cada volume do Windows na VM deve ter pelo menos 300 MB de espaço livre em disco. Isso inclui os volumes do Windows correspondentes a VHDs, iSCSI LUNs e discos de passagem conetados à VM.
+* Um trabalho de backup consistente com falhas sempre cria apenas uma cópia Snapshot. Ele não fornece integração VSS.
+* Vários trabalhos de backup consistentes com falhas podem ser executados em paralelo. Um trabalho de backup consistente com falhas pode ser executado em paralelo com um trabalho de backup consistente com aplicativos.
+* `Allow Saved State Backup` não é aplicável a trabalhos de cópia de segurança consistentes com falhas.
+

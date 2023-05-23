@@ -1,0 +1,73 @@
+---
+permalink: reference-dataset-backup-might-fail-with-a-partial-writer-error.html 
+sidebar: sidebar 
+keywords: vss, requestor, backup, component, partial, writer, error 
+summary: VSS Requestor - os componentes de backup falharam com erro de gravador parcial. 
+---
+= VSS Requestor - os componentes de backup falharam com erro de gravador parcial
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+* *Mensagem*
++
+[listing]
+----
+Error: Vss Requestor - Backup Components failed with partial
+writer error.
+Writer Microsoft Hyper-V VSS Writer involved in backup or restore
+operation reported partial failure. Writer returned failure code
+0x80042336. Writer state is 5.
+Application specific error information:
+Application error code: 0x1
+Application error message: -
+Failed component information:
+Failed component: VM GUID XXX
+    Writer error code: 0x800423f3
+    Application error code: 0x8004230f
+    Application error message: Failed to revert to VSS snapshot on the
+    virtual hard disk 'volume_guid' of the virtual machine 'vm_name'.
+   (Virtual machine ID XXX)
+----
++
+Os seguintes erros aparecem no log de eventos do aplicativo Windows no host Hyper-V:
+
++
+[listing]
+----
+Volume Shadow Copy Service error: Unexpected error calling routine
+GetOverlappedResult.  hr = 0x80070057, The parameter is incorrect.
+
+Operation:
+   Revert a Shadow Copy
+
+Context:
+   Execution Context: System Provider
+
+Volume Shadow Copy Service error: Error calling a routine on a Shadow
+Copy Provider
+{b5946137-7b9f-4925-af80-51abd60b20d5}. Routine details
+RevertToSnapshot
+[hr = 0x80042302, A Volume Shadow Copy Service component encountered
+an unexpected
+error.
+Check the Application event log for more information.].
+
+Operation:
+   Revert a Shadow Copy
+
+Context:
+   Execution Context: Coordinator
+----
+* *Descrição*
++
+Esta mensagem é exibida ao executar um backup consistente com o aplicativo de um conjunto de dados. Esse erro faz com que o backup falhe em algumas das máquinas virtuais no conjunto de dados.
+
+* *Ações corretivas*
++
+** Tente novamente a cópia de segurança do conjunto de dados.
+** Se a tentativa de tentativa falhar novamente, divida o conjunto de dados em dois conjuntos de dados para que todas as VMs cujo backup falhou sejam colocadas em um único conjunto de dados e todas as outras VMs sejam colocadas em outro conjunto de dados. Em seguida, execute o backup novamente.
+
+
+

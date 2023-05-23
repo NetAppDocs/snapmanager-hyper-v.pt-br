@@ -1,0 +1,31 @@
+---
+permalink: reference-vss-returns-errors-against-microsoft-iscsi-target-vss-hardware-provider-during-nas-backup.html 
+sidebar: sidebar 
+keywords: vss, return, error, micorsoft, iscsi, target, hardware, provider, nas, backup 
+summary: VSS retorna erros contra o provedor de hardware VSS de destino iSCSI da Microsoft durante o backup nas. 
+---
+= VSS retorna erros contra o provedor de hardware VSS de destino iSCSI da Microsoft durante o backup nas
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+* *Emissão*
++
+Ao executar um backup nas, os seguintes erros podem ocorrer:
+
++
+`Vss Requestor - Backup Components failed. Failed to add volume [example] to snapshot set. The shadow copy provider had an unexpected error while trying to process the specified operation.``
+
++
+`Volume Shadow Copy Service error: Error creating the Shadow Copy Provider COM class with CLSID [example]. Access is denied.`
+
+* *Causa*
++
+Esses erros ocorrem durante um backup consistente com aplicações nas. O backup do nas não falha, mas o VSS Registra alguns erros relacionados ao provedor de hardware VSS de destino iSCSI da Microsoft.
+
+* *Ações corretivas*
++
+O backup não falhou; você pode ignorar esses erros com segurança.
+
+

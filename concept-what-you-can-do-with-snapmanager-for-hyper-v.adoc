@@ -1,0 +1,33 @@
+---
+permalink: concept-what-you-can-do-with-snapmanager-for-hyper-v.html 
+sidebar: sidebar 
+keywords: snapmanager, hyper-v, enable, back, up, restore, multiple, virtual, machine, automatic, backup, task, schedule, scheduling, dataset, retention, replication 
+summary: O SnapManager para Hyper-V permite que você faça backup e restaure várias máquinas virtuais em vários hosts. Você pode criar conjuntos de dados e aplicar políticas a eles para automatizar tarefas de backup, como agendamento, retenção e replicação. 
+---
+= O que você pode fazer com o SnapManager para Hyper-V.
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+O SnapManager para Hyper-V permite que você faça backup e restaure várias máquinas virtuais em vários hosts. Você pode criar conjuntos de dados e aplicar políticas a eles para automatizar tarefas de backup, como agendamento, retenção e replicação.
+
+Você pode executar as seguintes tarefas com o SnapManager para Hyper-V:
+
+* Agrupe máquinas virtuais em conjuntos de dados que tenham os mesmos requisitos de proteção e aplique políticas a esses conjuntos de dados
+* Faça backup e restaure máquinas virtuais dedicadas e em cluster que residem em sistemas de storage que executam o software ONTAP
+* Fazer backup e restaurar máquinas virtuais hospedadas em Cluster Shared volumes (CSVs)
+* Automatize os backups de conjuntos de dados usando políticas de agendamento
+* Execute backups sob demanda de conjuntos de dados
+* Retenha backups de conjuntos de dados pelo tempo que precisar, usando políticas de retenção
+* Atualize a localização de destino do SnapMirror depois que uma cópia de segurança for concluída com êxito
+* Especifique scripts personalizados para serem executados antes ou depois de um backup
+* Restaurar máquinas virtuais a partir de backups
+* Monitore o status de todos os trabalhos programados e em execução
+* Gerencie hosts remotamente a partir de um console de gerenciamento
+* Forneça relatórios consolidados para operações de backup, restauração e configuração de conjuntos de dados
+* Executar uma combinação de backups consistentes com falhas e consistentes com aplicações
+* Execute operações de recuperação de desastres usando cmdlets do PowerShell
+* Realizar atualizações contínuas do sistema operacional de cluster (SO)
+

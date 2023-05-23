@@ -1,0 +1,22 @@
+---
+permalink: concept-report-path-settings.html 
+sidebar: sidebar 
+keywords: configure, report, path, setting, store, snapmanager, hyper-v, operation, configure, virtual, machine, dataset 
+summary: Você pode configurar as configurações do caminho do relatório para que você possa armazenar relatórios para operações do SnapManager para Hyper-V. Você deve configurar as configurações do caminho do relatório antes de adicionar recursos de máquina virtual a um conjunto de dados. 
+---
+= Definições do caminho do relatório
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Você pode configurar as configurações do caminho do relatório para que você possa armazenar relatórios para operações do SnapManager para Hyper-V. Você deve configurar as configurações do caminho do relatório antes de adicionar recursos de máquina virtual a um conjunto de dados.
+
+Se as configurações de relatório não estiverem configuradas quando um host pai Hyper-V for adicionado ao SnapManager para Hyper-V, você poderá configurar (e até mesmo alterar) essas configurações posteriormente, usando o assistente de configuração.
+
+Se você configurar as configurações do caminho do relatório para um cluster de host pai, será necessário criar manualmente o diretório do relatório em cada nó de cluster. O caminho do relatório não deve residir em um volume compartilhado de cluster (CSV) ou em um LUN compartilhado.
+
+*Informações relacionadas*
+
+http://technet.microsoft.com/library/jj612868.aspx["Microsoft TechNet: Use volumes compartilhados de Cluster em um Cluster de failover"]

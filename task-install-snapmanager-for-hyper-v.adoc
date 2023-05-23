@@ -1,0 +1,34 @@
+---
+permalink: task-install-snapmanager-for-hyper-v.html 
+sidebar: sidebar 
+keywords: install, snapmanager, hyper-v, back, up, restore, data, snapdrive, windows 
+summary: Você pode instalar o SnapManager para Hyper-V para que você possa fazer backup e restaurar seus dados. Você deve instalar o SnapDrive para Windows antes de instalar o SnapManager para Hyper-V. 
+---
+= Instale o SnapManager para Hyper-V.
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Você pode instalar o SnapManager para Hyper-V para que você possa fazer backup e restaurar seus dados. Você deve instalar o SnapDrive para Windows antes de instalar o SnapManager para Hyper-V.
+
+.O que você vai precisar
+É necessário fazer backup dos dados existentes e você deve ter as seguintes informações prontas:
+
+* Chave de licença
+* Credenciais de login
+* Número da porta (padrão: 808; deve corresponder ao número da porta de instalação do SnapDrive para Windows)
+
+
+.Passos
+. Clique duas vezes no arquivo executável do SnapManager para Hyper-V para iniciar o instalador do SnapManager para Hyper-V.
+. Selecione o local de instalação e clique em *Next*.
+. Conclua as etapas no assistente SnapManager para Hyper-V *Install Shield*.
+. Clique em *Instalar* na página *Pronto para instalar*.
+. Revise o resumo de suas seleções e clique em *Finish*.
+
+
+*Informações relacionadas*
+
+xref:reference-hotfix-requirements-for-windows-server-environments.adoc[Requisitos de hotfix para ambientes Windows Server]

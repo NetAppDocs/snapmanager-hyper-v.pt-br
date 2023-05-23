@@ -1,0 +1,80 @@
+---
+permalink: concept-data-management-concepts.html 
+sidebar: sidebar 
+keywords: snapmanager, hyper-v, dataset, policies, policy, enable, group, virtual, machine, apply, rule, retention, data, management, concept 
+summary: O SnapManager para Hyper-V usa conjuntos de dados e políticas, o que permite agrupar máquinas virtuais e, em seguida, aplicar regras a esses grupos para governar seu comportamento. 
+---
+= Conceitos de gerenciamento de dados
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+O SnapManager para Hyper-V usa conjuntos de dados e políticas, o que permite agrupar máquinas virtuais e, em seguida, aplicar regras a esses grupos para governar seu comportamento. Essas informações são úteis em cenários em que você está usando o SnapManager para Hyper-V para agendar um backup e especificar uma política de retenção para o backup.
+
+* *conjuntos de dados*
++
+Um conjunto de dados é um grupo de máquinas virtuais (VMs) que permite proteger os dados usando políticas de retenção, agendamento e replicação. Você pode usar conjuntos de dados para agrupar máquinas virtuais que têm os mesmos requisitos de proteção. Uma VM pode fazer parte de vários conjuntos de dados.
+
+* * Hosts pai do Hyper-V*
++
+Os hosts pai do Hyper-V são servidores físicos nos quais a função Hyper-V está ativada. Os hosts que contêm máquinas virtuais são adicionados ao SnapManager para Hyper-V para proteção e recuperação. O SnapManager para Hyper-V deve ser instalado e executado em cada host pai do Hyper-V.
+
+* *recursos desprotegidos*
++
+Recursos desprotegidos são máquinas virtuais que não fazem parte de nenhum conjunto de dados. É possível proteger esses recursos adicionando-os a um conjunto de dados.
+
+* *máquinas virtuais*
++
+Uma máquina virtual executada em um host pai Hyper-V é uma representação de uma máquina física, com seu próprio sistema operacional, aplicativos e hardware.
+
++
+O SnapManager para Hyper-V rastreia o identificador globalmente exclusivo, ou GUID, da máquina virtual e não o nome da máquina virtual. Se você excluir uma máquina virtual protegida pelo SnapManager para Hyper-V e, em seguida, criar uma máquina virtual diferente com o mesmo nome, a nova máquina virtual não será protegida, porque ela tem um GUID diferente.
+
+* *consoles de gerenciamento*
++
+Os consoles de gerenciamento são computadores nos quais o SnapManager para Hyper-V está instalado e funcionando como cliente. Você pode usar consoles de gerenciamento para gerenciar remotamente o SnapManager para operações Hyper-V em um host pai Hyper-V.
+
+* *políticas de agendamento*
++
+As políticas de agendamento designam trabalhos de backup para momentos específicos, permitindo automatizar o processo de agendamento. É possível adicionar várias políticas de agendamento, que se aplicam a todas as máquinas virtuais que são membros do conjunto de dados. O SnapManager para Hyper-V usa o Agendador do Windows para criar tarefas agendadas.
+
+* *políticas de retenção*
++
+Uma política de retenção é a forma como você gerencia a retenção de backup de conjunto de dados no SnapManager para Hyper-V. as políticas de retenção determinam quanto tempo manter um backup de conjunto de dados, com base no tempo ou no número de cópias de backup.
+
++
+Os limites definidos em uma política de retenção garantem que o backup de dados não comprometa a capacidade de storage futura.
+
++
+Você pode definir os seguintes períodos de retenção no SnapManager para Hyper-V:
+
++
+** Uma hora
+** Um dia
+** Uma semana
+** Um mês
+** Ilimitado
+
+
+
+
+
+NOTE: Você pode especificar um período de retenção uma vez por conjunto de dados.
+
+Depois de escolher com que frequência os backups de conjuntos de dados são excluídos, você pode optar por excluir backups que são mais antigos do que um período de tempo especificado ou backups que excedem um total máximo.
+
+Se o sistema parecer reter backups antigos, verifique as políticas de retenção. Todos os objetos em backup que compartilham uma cópia Snapshot precisam atender aos critérios de exclusão de backup para que a política de retenção acione a remoção de uma cópia Snapshot.
+
+* *políticas de replicação*
++
+Uma política de replicação determina se o destino do SnapMirror é atualizado após uma operação de backup bem-sucedida. O SnapManager para Hyper-V suporta apenas SnapMirror baseado em volume. Você deve configurar uma relação do SnapMirror nos dois sistemas de armazenamento antes de tentar executar uma atualização do SnapMirror. Isso é necessário para a origem e o destino.
+
+
+
+*Informações relacionadas*
+
+https://library.netapp.com/ecm/ecm_download_file/ECMP1368826["Guia de backup e recuperação on-line de proteção de dados do Data ONTAP 8.2 para o modo 7"]
+
+http://mysupport.netapp.com/documentation/productlibrary/index.html?productID=30049["Documentação do NetApp: SnapDrive para Windows (versões atuais)"]

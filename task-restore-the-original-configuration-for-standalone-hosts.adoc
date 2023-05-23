@@ -1,0 +1,21 @@
+---
+permalink: task-restore-the-original-configuration-for-standalone-hosts.html 
+sidebar: sidebar 
+keywords: vm, backed, up, primary, storage, system, return, original, configuration, snapmirror, relationship, primary, secondary, restore, restoring 
+summary: Após o backup das VMs no sistema de storage primário, você poderá retornar à configuração original usando uma relação do SnapMirror estabelecida do sistema de storage primário para o sistema de storage secundário. 
+---
+= Restaure a configuração original para hosts autônomos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Após o backup das VMs no sistema de storage primário, você poderá retornar à configuração original usando uma relação do SnapMirror estabelecida do sistema de storage primário para o sistema de storage secundário.
+
+.Passos
+. Encerre as VMs em execução no sistema de storage secundário.
+. Exclua as VMs em execução no sistema de storage secundário.
+. Desconete o disco SnapInfo e os discos que contêm VMs usando o SnapDrive.
+. Ressincronize a relação SnapMirror do sistema de storage primário para o sistema de storage secundário.
+

@@ -1,0 +1,32 @@
+---
+permalink: reference-datasets-are-not-automatically-replicated-to-new-nodes-in-a-windows-failover-cluster.html 
+sidebar: sidebar 
+keywords: dataset, automatic, replicated, node, windows, failover, cluster 
+summary: Os conjuntos de dados não são replicados automaticamente para novos nós em um cluster de failover do Windows. 
+---
+= Os conjuntos de dados não são replicados automaticamente para novos nós em um cluster de failover do Windows
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+* *Emissão*
++
+Depois de adicionar novos nós a um cluster de failover do Windows, os conjuntos de dados não são transferidos automaticamente para o novo nó.
+
+* *Causa*
++
+Ao adicionar novos nós a um cluster de failover do Windows, o SnapManager para Hyper-V não replica automaticamente os conjuntos de dados existentes para os novos nós no cluster.
+
+* *Ações corretivas*
++
+Execute o assistente Modificar conjunto de dados e clique em *Atualizar políticas de agendamento para todos os nós de membros do conjunto de dados* na página Detalhes básicos.
+
++
+Esse assistente deve ser executado para cada conjunto de dados que tenha máquinas virtuais.
+
+
+
+*Informações relacionadas*
+
+xref:task-modify-a-dataset.adoc[Modificar um conjunto de dados]

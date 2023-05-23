@@ -1,0 +1,31 @@
+---
+permalink: reference-backup-fails-after-removing-virtual-machine-from-hyper-v-manager.html 
+sidebar: sidebar 
+keywords: backup, fail, remove, virtual, machine, hyper-v, manager 
+summary: A cópia de segurança falha depois de remover uma máquina virtual do Gestor Hyper-V. 
+---
+= A cópia de segurança falha depois de remover uma máquina virtual do Gestor Hyper-V.
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+* *Emissão*
++
+Depois de remover uma máquina virtual Hyper-V (VM) do Hyper-V Manager, as operações de backup falharão se você não atualizar o conjunto de dados associado à VM.
+
+* *Causa*
++
+Esse problema ocorre quando você remove uma VM Hyper-V do Gerenciador Hyper-V e tenta fazer um backup sem modificar o conjunto de dados. Além disso, se você criou novamente uma VM, você deve modificar o conjunto de dados. O SnapManager para Hyper-V cria conjuntos de dados com base na ID da VM (GUID). O backup falha quando uma VM é excluída, removida ou recriada, o que cria um novo GUID. Embora isso não acione a falha de todo o processo de backup, se uma VM for excluída e, em seguida, recriada com o mesmo nome, ela não será protegida automaticamente pelo SnapManager para Hyper-V.
+
+* *Ações corretivas*
++
+Remova a VM da lista de conjuntos de dados de VMs e adicione quaisquer VMs criadas novamente ao conjunto de dados.
+
+
+
+*Informações relacionadas*
+
+xref:concept-configure-datasets.adoc[Configurar conjuntos de dados]
+
+xref:task-modify-a-dataset.adoc[Modificar um conjunto de dados]

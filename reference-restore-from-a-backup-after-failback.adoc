@@ -1,0 +1,35 @@
+---
+permalink: reference-restore-from-a-backup-after-failback.html 
+sidebar: sidebar 
+keywords: restore, restoring, backup, failback 
+summary: Restaurar a partir de uma cópia de segurança após o failback. 
+---
+= Restaurar a partir de uma cópia de segurança após o failback
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+* *Emissão*
++
+Se você executar um failover e um failback, talvez não consiga restaurar VMs em seu local principal a partir de um backup criado no mesmo local principal, antes do failover.
+
+* *Causa*
++
+A verificação de cópia Snapshot usa GUIDs de volume. GUIDs muda após a recuperação de desastres.
+
+* *Ação corretiva*
++
+Você pode desativar a opção verificar instantâneos por meio do PowerShell ou do assistente de restauração:
+
++
+** Desmarque a opção "Enable Snapshot Verification" (Ativar verificação de instantâneos) na página *Restore Options* (Opções de restauração) do assistente Restore (Restaurar).
+** Usando o PowerShell, certifique-se de que o parâmetro - `DisableVerifySnapshot` esteja especificado.
+
+
+
+
+*Informações relacionadas*
+
+xref:task-restore-a-virtual-machine-from-a-backup-copy.adoc[Restaure uma máquina virtual a partir de uma cópia de backup]

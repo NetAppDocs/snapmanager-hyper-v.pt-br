@@ -1,0 +1,22 @@
+---
+permalink: task-delete-a-report.html 
+sidebar: sidebar 
+keywords: delete, report, deleting 
+summary: Você pode excluir um ou mais relatórios quando eles não forem mais necessários. 
+---
+= Eliminar um relatório
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Você pode excluir um ou mais relatórios quando eles não forem mais necessários.
+
+.Passos
+. No painel de navegação, clique no menu:relatórios[Datasets] ou no menu:relatórios[hosts].
+. Selecione o conjunto de dados, a máquina virtual ou o host que contém o relatório ou os relatórios que você deseja excluir.
+. No painel relatórios, selecione o relatório ou os relatórios que deseja excluir.
+. No painel ações, clique em *Excluir relatório* e clique em *OK* para excluir.
+

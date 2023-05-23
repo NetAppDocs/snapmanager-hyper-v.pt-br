@@ -1,0 +1,25 @@
+---
+permalink: reference-msi-custom-property-used-in-silent-installation.html 
+sidebar: sidebar 
+keywords: msi, custom, property, silent, installation 
+summary: Propriedade personalizada MSI usada na instalação silenciosa. 
+---
+= Propriedade personalizada MSI usada na instalação silenciosa
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+* *Emissão*
++
+Os sistemas que executam o Windows Server 2008 ou Vista com o Windows Installer versão 4,5 não reconhecem as propriedades incorporadas do SnapManager para instalação do Hyper-V.
+
+* *Ações corretivas*
++
+Use o `MSIRESTARTMANAGERCONTROL=Disable` parâmetro do interrutor de comando com instalação.
+
+
+
+*Informações relacionadas*
+
+http://msdn.microsoft.com/library/["Biblioteca da Microsoft Developer Network (MSDN)"]

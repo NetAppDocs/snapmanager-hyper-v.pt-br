@@ -1,0 +1,25 @@
+---
+permalink: reference-unexpected-error-querying-for-the-ivsswritercallback-interface-hr-0x80070005.html 
+sidebar: sidebar 
+keywords: unexpect, error, query, ivsswritercallback, interface, hr, 0x80070005, access, denied, deny 
+summary: Erro inesperado consultando para a interface IVsWriterCallback. HR 0x80070005, o acesso é negado. 
+---
+= Erro inesperado consultando para a interface IVsWriterCallback. HR 0x80070005, o acesso é negado.
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+* *Mensagem*
++
+`Unexpected error querying for the IVssWriterCallback interface. hr = 0x80070005, Access is denied.`
+
+* *Descrição*
++
+Se um CSV for de propriedade do proprietário do grupo de cluster e a VM for de propriedade do nó do parceiro, o backup da VM será concluído com êxito com o erro VSS no log de eventos do aplicativo. Isso geralmente é causado por configurações de segurança incorretas no processo de escritor ou solicitante.
+
+* *Ações corretivas*
++
+Nenhuma: Esta mensagem de erro pode ser ignorada.
+
+

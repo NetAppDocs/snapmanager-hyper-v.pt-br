@@ -1,0 +1,14 @@
+---
+permalink: concept-perform-disaster-recovery.html 
+sidebar: sidebar 
+keywords: disaster, recovery, feature, ensure, disaster, circumstance, critical, protect, data, primary, storage, powershell, perform 
+summary: O recurso de recuperação de desastre garante que, se um desastre ou outra circunstância tornar os dados protegidos críticos em seus locais de storage primário indisponíveis, você possa fornecer acesso à cópia de backup desses dados em seus locais de storage secundário. A recuperação de desastres só pode ser realizada usando a interface do PowerShell. 
+---
+= Executar recuperação de desastres
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+O recurso de recuperação de desastre garante que, se um desastre ou outra circunstância tornar os dados protegidos críticos em seus locais de storage primário indisponíveis, você possa fornecer acesso à cópia de backup desses dados em seus locais de storage secundário. A recuperação de desastres só pode ser realizada usando a interface do PowerShell.

@@ -1,0 +1,45 @@
+---
+permalink: concept-dashboard-settings.html 
+sidebar: sidebar 
+keywords: snapmanager, hyper-v, dashboard, overview, resource, protect, job, resource, history, setting 
+summary: O painel do SnapManager para Hyper-V exibe uma visão geral dos recursos que estão sendo protegidos atualmente, bem como aqueles que não estão protegidos. Você pode selecionar diferentes segmentos do gráfico de pizza Status de proteção da VM ou do gráfico de barras Histórico de tarefas para exibir informações gerais sobre o status de suas tarefas, recursos e histórico. 
+---
+= Definições do painel de instrumentos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+O painel do SnapManager para Hyper-V exibe uma visão geral dos recursos que estão sendo protegidos atualmente, bem como aqueles que não estão protegidos. Você pode selecionar diferentes segmentos do gráfico de pizza Status de proteção da VM ou do gráfico de barras Histórico de tarefas para exibir informações gerais sobre o status de suas tarefas, recursos e histórico.
+
+image::smhv_dashboard.gif[painel de instrumentos smhv]
+
+* *Status de proteção da VM*
++
+Quando você seleciona um segmento no gráfico de pizza Status de proteção da VM, você pode exibir informações sobre o status de proteção das máquinas virtuais no painel Detalhes. As descrições para valores válidos são as seguintes:
+
++
+** *OK*
++
+Exibe o backup bem-sucedido mais recente de todas as máquinas virtuais.
+
+** *Falhou*
++
+Exibe o backup com falha mais recente de cada máquina virtual.
+
+** *Desprotegido*
++
+Exibe as máquinas virtuais que não pertencem a nenhum conjunto de dados e, portanto, estão desprotegidas.
+
+
+
+* *Histórico de vagas*
++
+Ao selecionar um segmento no gráfico de barras Histórico de trabalhos, pode visualizar, no painel Detalhes, o histórico de trabalhos concluídos, falhados e em execução durante um período de tempo especificado. Pode alterar o período de tempo em que os detalhes do trabalho são apresentados no gráfico de barras Histórico do trabalho. O valor padrão é sete dias.
+
+* *Configurar atualização*
++
+Você pode alterar a frequência com que o painel atualiza as informações exibidas usando o botão *Configurar atualização*. O valor padrão é de 10 minutos.
+
+

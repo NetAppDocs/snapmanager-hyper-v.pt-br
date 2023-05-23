@@ -1,0 +1,165 @@
+---
+permalink: reference-command-line-switch-descriptions.html 
+sidebar: sidebar 
+keywords: command, line, switch, perform, silent, installation, enable, script, snapmanager, hyper-v 
+summary: Você pode usar switches de linha de comando para executar uma instalação silenciosa, que permite usar um script de instalação para instalar o SnapManager para Hyper-V. 
+---
+= Lista e descrição dos interrutores de linha de comando para instalação silenciosa
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Você pode usar switches de linha de comando para executar uma instalação silenciosa, que permite usar um script de instalação para instalar o SnapManager para Hyper-V.
+
+A tabela a seguir fornece uma lista de valores e descreve cada um dos switches de instalação da linha de comando disponíveis.
+
+|===
+| Interrutor | Valor | Descrição 
+
+
+ a| 
+MODO SILENCIOSO
+ a| 
+1
+ a| 
+Permite que o SnapManager para Hyper-V execute corretamente o recurso de instalação autônoma. Esse switch é necessário para instalações, atualizações e desinstalações completas pela primeira vez.
+
+
+
+ a| 
+O QUE É QUE É
+ a| 
+ a| 
+Especifica o modo de reinstalação a ser usado.
+
+
+
+ a| 
+O QUE É QUE É
+ a| 
+v
+ a| 
+Indica que a instalação é executada a partir do pacote de origem e que o pacote local está em cache. Não use esta opção para instalações pela primeira vez do SnapManager para Hyper-V. reinstala todos os arquivos independentemente da versão, data ou valor da soma de verificação.
+
+
+
+ a| 
+O QUE É QUE É
+ a| 
+a
+ a| 
+Reinstala o SnapManager para arquivos Hyper-V se versões anteriores estiverem presentes ou se os arquivos estiverem ausentes.
+
+
+
+ a| 
+O QUE É QUE É
+ a| 
+o
+ a| 
+Indica que todas as entradas de Registro necessárias do SnapManager para Hyper-V de HKEY_LOCAL_MACHINE e HKEY_CLASSES_ROOT devem ser reescritas.
+
+
+
+ a| 
+O QUE É QUE É
+ a| 
+m
+ a| 
+Indica que todas as entradas de Registro necessárias do SnapManager para Hyper-V de HKEY_current_User e HKEY_USERS devem ser reescritas.
+
+
+
+ a| 
+O QUE É QUE É
+ a| 
+u
+ a| 
+Reinstala todos os atalhos e recaches todos os ícones, substituindo quaisquer atalhos e ícones existentes.
+
+
+
+ a| 
+VOLTAR A INSTALAR
+ a| 
+TUDO
+ a| 
+Reinstala todos os recursos do SnapManager para Hyper-V.
+
+
+
+ a| 
+/Li
+ a| 
+nome do ficheiro
+ a| 
+Especifica que um log de instalação do SnapDrive deve ser gerado.
+
+
+
+ a| 
+SMHV_LICENSE
+ a| 
+licença
+ a| 
+Especifica a licença SnapManager apropriada e válida para Hyper-V.
+
+
+
+ a| 
+O QUE É QUE NÃO É
+ a| 
+diretório de instalação de destino
+ a| 
+Especifica o diretório de instalação de destino no qual o SnapManager para Hyper-V está instalado. Este switch é necessário somente ao instalar o SnapManager para Hyper-V pela primeira vez.
+
+
+
+ a| 
+SVCUSERNAME
+ a| 
+DOMÍNIO/nome de utilizador
+ a| 
+Especifica o domínio e o nome de usuário que o SnapManager para Hyper-V usa durante a instalação autônoma.
+
+
+
+ a| 
+A PALAVRA-PASSE NÃO ESTÁ DISPONÍVEL
+ a| 
+palavra-passe
+ a| 
+Especifica a senha para o usuário SMHVSRV_PASSWORD.
+
+
+
+ a| 
+SMBVSRV_CONFIRMUSERPASSWORD
+ a| 
+palavra-passe
+ a| 
+Confirma a senha para o usuário SMHVSRV_CONFIRMUSERPASSWORD.
+
+
+
+ a| 
+SMHV_WEBSRV_TCP_PORT
+ a| 
+número da porta
+ a| 
+Especifica qual porta o serviço da Web SnapManager para Hyper-V usa para o Net.TCP. A porta padrão é 808.
+
+|===
+A sintaxe a seguir mostra uma nova instalação:
+
+`setup.exe /s /v"/qn SILENT_MODE=1 /L*v SMHVInstall.log SVCUSERNAME=Domain\User Name SMHVSRV_PASSWORD=password SMHVSRV_CONFIRMUSERPASSWORD=password"`
+
+A sintaxe a seguir mostra uma atualização:
+
+`setup.exe /s /v"/qn REINSTALLMODE=vamus REINSTALL=ALL SILENT_MODE=1 /L*v SMHVUpgrade.log SVCUSERNAME=Domain\User Name SMHVSRV_PASSWORD=password SMHVSRV_CONFIRMUSERPASSWORD=password"`
+
+A sintaxe a seguir mostra uma desinstalação:
+
+`Setup.exe /s /x /v"/qn SILENT_MODE=1 /L*v SMHVuninstall.log"`

@@ -1,0 +1,14 @@
+---
+permalink: concept-snapmanager-for-hyper-v-troubleshoot.html 
+sidebar: sidebar 
+keywords: encounter, unexpected, behavior, installation, configuration, troubleshoot, identify, resolve 
+summary: Se você encontrar um comportamento inesperado durante a instalação ou configuração do SnapManager para Hyper-V, você pode seguir procedimentos específicos de solução de problemas para identificar e resolver a causa de tais problemas. 
+---
+= Solucionar problemas do SnapManager para Hyper-V.
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Se você encontrar um comportamento inesperado durante a instalação ou configuração do SnapManager para Hyper-V, você pode seguir procedimentos específicos de solução de problemas para identificar e resolver a causa de tais problemas.

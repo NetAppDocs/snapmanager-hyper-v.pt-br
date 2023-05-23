@@ -1,0 +1,25 @@
+---
+permalink: reference-backup-failed-for-the-following-vm-s-since-it-cannot-be-backedup-online-or-no-vm-to-be-found-for-backup.html 
+sidebar: sidebar 
+keywords: backup, fail, follow, vm, backed, up, online 
+summary: A cópia de segurança falhou para as seguintes VM, uma vez que não pode ser efetuada uma cópia de segurança online ou não foi encontrada nenhuma VM para cópia de segurança. 
+---
+= A cópia de segurança falhou para as seguintes VM, uma vez que não pode ser efetuada uma cópia de segurança online ou não foi encontrada nenhuma VM para cópia de segurança
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+* *Mensagem*
++
+`Backup Failed for the following VM(s) since it cannot be backed up online or NO VM to be found for backup`
+
+* *Descrição*
++
+Esta mensagem ocorre quando o backup de uma VM do Windows 2012 em um pai do Windows 2008 R2 SP1 Hyper-V sem a opção permitir backup de VM de estado salvo ativada falha.
+
+* *Ações corretivas*
++
+Para backups do Windows 2012, execute o backup com a `Allow saved state` opção de backup da VM ativada.
+
+

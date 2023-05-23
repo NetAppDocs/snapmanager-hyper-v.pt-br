@@ -1,0 +1,23 @@
+---
+permalink: task-view-a-hyper-v-parent-host-or-host-cluster.html 
+sidebar: sidebar 
+keywords: view, configuration, information, specific, hyper-v, parent, host, cluster, monitor, status 
+summary: Você pode exibir informações de configuração sobre um host pai ou cluster de host específico do Hyper-V para que você possa monitorar seu status. 
+---
+= Exibir um host pai ou cluster de host do Hyper-V.
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Você pode exibir informações de configuração sobre um host pai ou cluster de host específico do Hyper-V para que você possa monitorar seu status.
+
+.Passos
+. No painel de navegação, clique no menu:proteção[hosts].
+. Selecione o host ou cluster de host que você deseja exibir.
++
+O painel Detalhes exibe o nome do cluster de host ou host, o domínio, os membros do cluster (se aplicável) e as mensagens de configuração. Se você selecionar um host que não está configurado, o painel Detalhes exibirá informações sobre o que não está configurado.
+
+

@@ -1,0 +1,29 @@
+---
+permalink: reference-volume-shadow-copy-service-error-an-internal-inconsistency-was-detected.html 
+sidebar: sidebar 
+keywords: volume, shadow, copy, service, error, internal, inconsistency, detect 
+summary: 'Erro do serviço de cópia de sombra de volume: Foi detetada uma inconsistência interna.' 
+---
+= Erro do serviço de cópia de sombra de volume: Foi detetada uma inconsistência interna
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+* *Mensagem*
++
+`Volume Shadow Copy Service error: An internal inconsistency was detected in trying to contact shadow copy service writers. Please check to see that the Event Service and Volume Shadow Copy Service are operating properly.`
+
+* *Descrição*
++
+Quando você executa um backup de uma máquina virtual que usa o Windows Server 2003, ele falha repetidamente devido a um erro de tentativa.
+
+* *Ações corretivas*
++
+Verifique o log de eventos do aplicativo do Windows dentro da máquina virtual para verificar se há erros VSS.
+
+
+
+*Informações relacionadas*
+
+http://support.microsoft.com/kb/940184["Artigo de suporte da Microsoft 940184: Mensagem de erro quando você executa o comando "vssadmin list Writers" em um computador baseado no Windows Server 2003: "Erro: 0x8000FFFF""]

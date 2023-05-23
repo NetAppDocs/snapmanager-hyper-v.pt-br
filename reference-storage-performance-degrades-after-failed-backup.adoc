@@ -1,0 +1,25 @@
+---
+permalink: reference-storage-performance-degrades-after-failed-backup.html 
+sidebar: sidebar 
+keywords: storage, performance, degrade, fail, backup 
+summary: O desempenho do armazenamento degrada após falha na cópia de segurança. 
+---
+= O desempenho do armazenamento degrada após falha na cópia de segurança
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+* *Emissão*
++
+O desempenho do armazenamento pode degradar-se após uma tarefa de cópia de segurança com falha.
+
+* *Causa*
++
+Se os componentes VSS do Microsoft Hyper-V tiverem uma exceção durante um backup, os volumes compartilhados do cluster (CSVs) podem permanecer no modo de e/S redirecionado, causando sobrecarga de e/S e possíveis gargalos no cluster de failover do Windows. Isso pode levar à degradação geral da performance, com o maior impacto para as VMs que residem no CSV no modo de e/S redirecionado.
+
+* *Ações corretivas*
++
+Contacte o suporte da Microsoft para obter assistência com este problema.
+
+
